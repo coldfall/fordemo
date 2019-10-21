@@ -1,0 +1,21 @@
+/* pages/submitsuc/index.wxss */
+
+.sucpic{
+	position: relative;
+	width: 372rpx;
+	height: 243rpx;
+	margin: auto;
+	margin-top: 190rpx;
+}
+
+.sucpic image{
+	width: 100%;
+}
+
+.texttitle{
+	font-size: 36rpx;
+}
+
+.content .rowcontact{
+	line-height: 120%;
+}

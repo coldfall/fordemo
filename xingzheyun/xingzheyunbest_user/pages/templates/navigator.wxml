@@ -1,0 +1,9 @@
+<template name="nsNavigator">
+  <view class='navi'>
+    <view class='btnorder btnnavi' hover-class='buttonactive' hover-stay-time="50" bind:tap="clickOrders"><view ><image src="/res/icons/bottomicon_1.png" mode="widthFix" /></view>订单</view>
+    <view class='btnhotline  btnnavi' hover-class='buttonactive' hover-stay-time="50" bind:tap="clickHotLine"><view ><image src="/res/icons/bottomicon_2.png"  mode="widthFix" /></view>服务热线</view>
+    <view class='btnhome' hover-class='buttonactive' hover-stay-time="50"><image src="/res/icons/bottomicon.png"  mode="widthFix"  bind:tap="clickMain"/></view>
+    <view class='btnmember  btnnavi' hover-class='buttonactive' hover-stay-time="50" bind:tap="clickMe"><view ><image src="/res/icons/bottomicon_3.png"  mode="widthFix"/></view>个人中心</view>
+    <view class='btncar  btnnavi' hover-class='buttonactive' hover-stay-time="50"  bind:tap="clickMyCars"><view ><image src="/res/icons/bottomicon_4.png"  mode="widthFix"/></view>车辆信息</view>
+  </view>
+</template>

@@ -1,0 +1,107 @@
+<!--pages/orderdetail/index.wxml-->
+
+
+<map class="mapmain" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" polyline="{{polyline}}"></map>
+<view class="content">
+	<view wx:if="{{orderStatus==1||orderStatus==4||orderStatus==5}}" class="rowinfo grayshadow">
+		<view class="colleft"><view class="head"><image src="{{du.headimg}}" mode="widthFix"></image></view></view>
+		<view class="colmiddle">
+			<view class="user">{{du.truename}} <text class="carnum">{{driverCar.carNo}}</text></view>
+			<view class="rowcomment">
+				<view class="stars">
+					<image src="{{du.star>=1?'/res/icons/stargold.png':'/res/icons/star.png'}}"  mode="widthFix" />
+					<image src="{{du.star>=2?'/res/icons/stargold.png':'/res/icons/star.png'}}"  mode="widthFix" />
+					<image src="{{du.star>=3?'/res/icons/stargold.png':'/res/icons/star.png'}}"  mode="widthFix" />
+					<image src="{{du.star>=4?'/res/icons/stargold.png':'/res/icons/star.png'}}"  mode="widthFix" />
+					<image src="{{du.star>=5?'/res/icons/stargold.png':'/res/icons/star.png'}}"  mode="widthFix" />
+				</view>
+				<view class="score">{{du.star}}</view>
+				<view class="count">{{du.orderCount}}单</view>
+			</view>
+		</view>
+		<view class="colright">
+		
+			<button class="btnmobile" hover-class="buttonactive"  data-phone="{{du.phone}}" bind:tap="onCall"></button>
+		</view>
+	</view>
+
+
+	<view  wx:if="{{orderStatus<=5&&showcomment==false}}"  class="rowprogress grayshadow">
+		<view class="probarback">
+			<view class="probar {{'p'+orderStatus}}"></view>
+			<view class="steps step1 {{orderStatus==0?'on':(orderStatus>0?'off':'')}}">
+				<view class="time">{{times[0]}}</view>
+				<view class="dot"></view>
+				<view class="title">派单</view>
+			</view>
+			<view class="steps step2 {{orderStatus==1?'on':(orderStatus>1?'off':'')}}">
+				<view class="time">{{times[1]}}</view>
+				<view class="dot"></view>
+				<view class="title">接单</view>
+			</view>
+			<view class="steps step3 {{orderStatus==2?'on':(orderStatus>2?'off':'')}}">
+				<view class="time">{{times[2]}}</view>
+				<view class="dot"></view>
+				<view class="title">到达</view>
+			</view>
+			<view class="steps step4 {{orderStatus==4?'on':(orderStatus>3?'off':'')}}">
+				<view class="time">{{times[3]}}</view>
+				<view class="dot"></view>
+				<view class="title">评价</view>
+			</view>
+			<view class="steps step5 {{orderStatus==5?'on':(orderStatus>4?'off':'')}}">
+				<view class="time">{{times[4]}}</view>
+				<view class="dot"></view>
+				<view class="title">完成</view>
+			</view>
+		</view>
+	</view>
+
+	<view wx:if="{{orderStatus==1}}" class="rownob rowbtn"><button class='bigbutton grayshadow btndisable' hover-class='buttonactive' bind:tap="onCancelOrder">取消订单</button></view>
+
+	<view wx:if="{{orderStatus==0}}" class="rownob rowbtn"><button class='btncancel grayshadow' hover-class='buttonactive' bind:tap="onCancelOrder">取消订单</button><button class='btnpush grayshadow ' hover-class='buttonactive' bind:tap="onPushOrder">催促订单</button></view>
+
+	<view wx:if="{{orderStatus==4&&showcomment==false}}" class="rownob rowbtn"><button class='bigbutton grayshadow' hover-class='buttonactive' bind:tap="onClickComment">评价</button></view>
+
+
+
+	<view wx:if="{{orderStatus==4&&showcomment}}" class="fullshadow commentwrapper">
+		<view class="comment grayshadow">
+			<view class="title">
+				
+				<view class="btnclose" hover-class='buttonactive' bind:tap="onClickClose"></view>
+				评价
+			</view>
+			<view  class="rowinfo">
+				<view class="colleft"><view class="head"><image src="{{du.headimg}}" mode="widthFix"></image></view></view>
+				<view class="colmiddle">
+					<view class="user">{{du.truename}} <text class="carnum">{{driverCar.carNo}}</text></view>
+					<view class="rowcomment">
+						<view class="stars">
+							<image src="{{du.star>=1?'/res/icons/stargold.png':'/res/icons/star.png'}}"  mode="widthFix" />
+							<image src="{{du.star>=2?'/res/icons/stargold.png':'/res/icons/star.png'}}"  mode="widthFix" />
+							<image src="{{du.star>=3?'/res/icons/stargold.png':'/res/icons/star.png'}}"  mode="widthFix" />
+							<image src="{{du.star>=4?'/res/icons/stargold.png':'/res/icons/star.png'}}"  mode="widthFix" />
+							<image src="{{du.star>=5?'/res/icons/stargold.png':'/res/icons/star.png'}}"  mode="widthFix" />
+						</view>
+						<view class="score">{{du.star}}</view>
+						<view class="count">{{du.orderCount}}单</view>
+					</view>
+				</view>
+				<view class="colright">
+				
+					<button class="btnmobile" hover-class="buttonactive" data-phone="{{du.phone}}" bind:tap="onCall"></button>
+				</view>
+			</view>
+			<view class="stars">
+				<image src="{{star>=1?'/res/icons/stargold.png':'/res/icons/star.png'}}"  mode="widthFix" data-star="1" bind:tap="onClickStar"/>
+				<image src="{{star>=2?'/res/icons/stargold.png':'/res/icons/star.png'}}"  mode="widthFix"  data-star="2" bind:tap="onClickStar"/>
+				<image src="{{star>=3?'/res/icons/stargold.png':'/res/icons/star.png'}}"  mode="widthFix"  data-star="3" bind:tap="onClickStar"/>
+				<image src="{{star>=4?'/res/icons/stargold.png':'/res/icons/star.png'}}"  mode="widthFix"  data-star="4" bind:tap="onClickStar"/>
+				<image src="{{star>=5?'/res/icons/stargold.png':'/res/icons/star.png'}}"  mode="widthFix"  data-star="5" bind:tap="onClickStar"/>
+			</view>
+			<view class="starsword">{{commenttext}}</view>
+			<view  class="rownob rowbtn"><button class='bigbutton grayshadow' hover-class='buttonactive' bind:tap="onSubmitStar">提交评价</button></view>
+		</view>
+	</view>
+</view>

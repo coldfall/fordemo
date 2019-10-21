@@ -1,0 +1,109 @@
+/* pages/reg/index.wxss */
+
+.top{
+  width: 750rpx;
+  height: 533rpx;
+}
+
+.top image{
+  width: 750rpx;
+  height: 533rpx;
+}
+.content{
+  margin-top: 70rpx;
+}
+
+.content .commontext{
+  width: 118rpx;
+  padding-left: 0rpx;
+  margin-right: 5rpx;
+  float: left;
+  height: 120rpx;
+  text-align: right;
+  line-height:120rpx;
+}
+
+.content .arrow{
+  float: right;
+  margin-right: 15rpx;
+  margin-top: 48rpx;
+}
+
+.content .inputmobile{
+  width: 532rpx;
+  float: left;
+  text-align: left;
+
+}
+
+.content .inputvalid{
+  width: 518rpx;
+  float: left;
+  text-align: left;
+  margin-left: 20rpx;
+}
+
+.content .btnvalid{
+  width: 190rpx;
+  height: 60rpx;
+  float: left;
+  text-align: center;
+  color: #3d73dd;
+  font-size: 30rpx;
+  line-height: 60rpx;
+
+}
+.content .rowgo{
+  margin-top: 220rpx;
+}
+.content .ckagree .wx-checkbox-input{
+
+  width: 32rpx;
+  height: 32rpx;
+  color: #FFFFFF;
+  background-color: #3d73dd;
+  border:none;
+  border-radius: 20rpx;
+  padding: 5rpx;
+}
+
+.content .sep{
+  width: 100%;
+  height: 1rpx;
+  margin-top: 80rpx;
+  border-bottom: solid 1rpx #eeeeee;
+  text-align: center;
+}
+
+.content .sep .sepin{
+  width: 227rpx;
+  height: 50rpx;
+  background-color: #FFFFFF;
+  text-align: center;
+  margin-top: -22rpx;
+  position: absolute;
+  margin-left:-113.5rpx;
+  left: 50%; 
+}
+
+.content .rowwx{
+  
+  margin-bottom: 100rpx;
+}
+
+.content .rownob .btnwx{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 46rpx;
+  background:none;
+  border:solid 1rpx #dfdfdf;
+  text-align: center;
+  margin-top: 49rpx;
+  padding: 0rpx;
+}
+
+.content .rownob .btnwx image{
+  width: 50rpx;
+  margin:auto;
+  margin-top: 25rpx;
+}

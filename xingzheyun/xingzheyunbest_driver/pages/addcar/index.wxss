@@ -1,0 +1,62 @@
+/* pages/addcar/index.wxss */
+
+.rowborder .left{
+	width: 144rpx;
+	height:50rpx;
+	margin-top: 25rpx;
+	text-align: left;
+	padding-left: 25rpx;
+	color: #333333;
+	font-size: 28rpx;
+	line-height: 50rpx;
+	float: left;
+}
+
+.rowborder .middle{
+	width: 177rpx;
+	height:50rpx;
+	margin-top: 25rpx;
+	text-align: left;
+	padding-left: 5rpx;
+	color: #333333;
+	font-size: 28rpx;
+	line-height: 50rpx;
+	float: left;
+}
+
+
+.middle .downarrow{
+	position: absolute;
+	margin-left: 80rpx;
+	margin-top: 10rpx;
+}
+
+.rowborder .right{
+	width: 314rpx;
+	height:50rpx;
+	margin-top: 25rpx;
+	text-align: right;
+	padding-right: 15rpx;
+	color: #333333;
+	font-size: 28rpx;
+	line-height: 50rpx;
+	float: right;
+}
+.right .comment{
+	float: right;
+
+}
+
+.right .arrow{
+	float: right;
+	margin-left: 10rpx;
+	margin-top: 15rpx;
+}
+
+
+.content .rownob.rowbtn{
+	position: fixed;
+	bottom: 70rpx;
+	margin-left: -375rpx;
+	left: 50%;
+}

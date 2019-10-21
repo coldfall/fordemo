@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="btnOKSkin" states="up,down,disabled" width="188" height="55"
+        xmlns:e="http://ns.egret.com/eui">
+	<e:Image source="btnok_png" width.down="144" height.down="42" x.down="22" y.down="7"/>
+</e:Skin>

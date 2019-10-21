@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="FinalViewSkin" width="1138" height="640" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="bgstart_jpg"/>
+	<e:Image id="r1" source="roundstart_png" x="715" y="-118"/>
+	<e:Image id="r2" source="roundstart_png" x="-169" y="-70"/>
+	<e:Image id="r3" source="roundstart_png" x="292" y="373"/>
+	<e:Image source="bgresult_png"/>
+	<e:Image id="mark" source="award_1_png"/>
+	<e:Label id="txtper" text="100%" x="646" y="307" textColor="0x4E4E4E" width="104" textAlign="center"/>
+	<e:Button id="btnagain" label="按钮" x="581" y="462" skinName="btnAgainSkin"/>
+	<e:Button id="btnshare" label="按钮" x="794" y="462" skinName="btnShareSkin"/>
+	<e:Image id="sharemask" source="share_png" visible="false"/>
+</e:Skin>

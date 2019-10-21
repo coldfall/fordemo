@@ -1,0 +1,7 @@
+<view class="section">
+  <input bindinput="bindInput" placeholder="搜索" focus="true" />
+</view>
+<view bind:tap="bindSearch" data-name="{{i.name}}" data-loc="{{i.location}}" class="text_box" wx:for="{{poisdata}}" wx:for-item="i">
+  <i class="iconfont icon-position"></i>{{i.name}}  
+  <view>{{i.pname+i.adname+i.address}}</view>
+</view>

@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/reg/index",
+    "pages/userinfo/index",
+    "pages/submitsuc/index",
+    "pages/myinfo/index",
+    "pages/mycars/index",
+    "pages/addcrop/index",
+    "pages/orderlist/index",
+    "pages/orderdetail/index",
+    "pages/uploads/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "行者云司机端",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于查找救援车辆和显示救援流程"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

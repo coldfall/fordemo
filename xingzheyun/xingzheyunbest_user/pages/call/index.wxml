@@ -1,0 +1,40 @@
+<!--pages/call/index.wxml-->
+<view class="container">
+	<view class="formrow first">
+		<view class="title">您的车辆属于哪种情况？</view>
+		<view class="formcontent">
+			<view class="btnstatus  grayshadow {{accident==0?'on':''}}" data-acc="0" bind:tap="onClickAcc">
+				<image src="/res/icons/btnstatus1.png" class="statusbtn" mode="widthFix" />
+				<view class="btntitle">遇到事故</view>
+			</view>
+			<view class="btnstatus grayshadow {{accident==1?'on':''}}" data-acc="1" bind:tap="onClickAcc">
+				<image src="/res/icons/btnstatus2.png" class="statusbtn" mode="widthFix" />
+				<view class="btntitle">非事故</view>
+			</view>
+		</view>
+	</view>
+	<view class="formrow">
+		<view class="title">车辆发生故障的位置？</view>
+		<view class="formcontent">
+			<view wx:for="{{locarray}}"  class="checkbtn  {{loc==item.dict_value?'on':''}}"data-id="{{item.dict_value}}"  bind:tap="onClickLoc">{{item.dict_label}}</view>
+		</view>
+	</view>
+	<view class="formrow">
+		<view class="title">故障类型是？</view>
+		<view class="formcontent">
+			<view wx:for="{{ftypearray}}"  class="checkbtn  {{ftype==item.dict_value?'on':''}}"data-id="{{item.dict_value}}"  bind:tap="onClickFtype">{{item.dict_label}}</view>
+		</view>
+	</view>	
+	<view class="formrow textrow">
+		<view class="title">还要描述更多状况吗？</view>
+		<view class="formcontent">
+			<view class="inputwrapper">
+				<textarea  placeholder="您可再简单描述车辆故障状况" maxlength="200" bindinput="onInputDesc" bindconfirm="onConfirmDesc"></textarea>
+				<text class="textcnt">{{textcnt}}/200</text>
+			</view>
+		</view>
+	</view>	
+
+	<view class="rownob rowbtn"><button bind:tap="onSubmit" class="bigbutton grayshadow {{enablesubmit?'':'btndisable'}}" hover-class='buttonactive'>确认呼叫救援</button></view>	
+
+</view>

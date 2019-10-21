@@ -1,0 +1,28 @@
+<!--pages/orders/index.wxml-->
+<view class="swp">
+	<view  class="container orders" >
+		<view class="order" wx:for="{{orders}}">
+			<view class="titlerow">
+				<view class="icon"><image src="/res/icons/iconlist_car{{item.service_id}}.png" mode="widthFix" /></view>
+				<view class="title">{{item.name}}</view>
+				<view class="status {{item.order_status==9?'gray':''}}"  >{{item.statusText}}</view>
+			</view>		
+			<view class="detailrow">
+				<view class="loc">{{item.user_address}}</view>
+				<view class="price" wx:if="{{item.amt}}"><text class="money">￥</text>{{item.amt}}</view>
+				<view class="time">{{item.createdate}}</view>
+				
+			</view>
+			<view class="btnrow">
+				
+				<button class="btnprogress" wx:if="{{item.order_status<4}}" data-orderid="{{item.orderid}}" bind:tap="onClickView">查看进度</button>
+				<button class="btndetail" wx:if="{{item.order_status==4||item.order_status==5}}" data-orderid="{{item.orderid}}" bind:tap="onClickView">订单详情</button>
+				<button class="btnprogress" wx:if="{{item.order_status==10}}" data-orderid="{{item.orderid}}" bind:tap="onClickPay">继续支付</button>
+			</view>			
+		</view>
+		<view class="noorder" wx:if="{{orders.length==0}}">暂无数据</view>
+					
+		<import src="../templates/navigator.wxml" />
+    	<template is="nsNavigator" />
+	</view>
+</view>

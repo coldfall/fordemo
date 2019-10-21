@@ -1,0 +1,44 @@
+<!--pages/myinfo/index.wxml-->
+<view class="content">
+	
+	<view class="navis">
+		
+		<view class="naviitem"><navigator class="off" url="/pages/orderlist/index" open-type="redirect">订单列表</navigator></view>
+		<view class="naviitem"><navigator class="on" >个人信息</navigator></view>
+	</view>
+
+	<view class="rowhead"><image  src="{{driver.headimg}}" mode="widthFix" /></view>
+	<view class="crow rowname">{{driver.truename}}<image class="gender" src="/res/icons/{{driver.icongender?'defaulthead.png':driver.icongender}}" mode="widthFix" /></view>
+	<view class="crow commontext rowdesc">行者云服务商  {{driver.age}}岁</view>
+	<view class="rowcomment">
+		<view class="stars">
+
+			<image src="{{driver.star>=1?'/res/icons/stargold.png':'/res/icons/star.png'}}"  mode="widthFix" />
+			<image src="{{driver.star>=2?'/res/icons/stargold.png':'/res/icons/star.png'}}"  mode="widthFix" />
+			<image src="{{driver.star>=3?'/res/icons/stargold.png':'/res/icons/star.png'}}"  mode="widthFix" />
+			<image src="{{driver.star>=4?'/res/icons/stargold.png':'/res/icons/star.png'}}"  mode="widthFix" />
+			<image src="{{driver.star>=5?'/res/icons/stargold.png':'/res/icons/star.png'}}"  mode="widthFix" />
+		</view>
+		<view class="score">{{driver.star}}</view>
+		<view class="count">{{driver.orderCount}}单</view>
+	</view>
+	<view class="crow rowservice">
+		<view class="con">
+			<button wx:for="{{driver.service}}"  class="smallbutton on" data-id="{{item.service_id}}">{{item.name}}</button>
+		</view>
+	</view>	
+	<view class="rownob firstrow">
+		<view class="colmobile hinttext">手机号</view>
+		<view class="colmobilenum commontext">{{driver.phone}}</view>
+	</view>
+	<view class="rownob">
+		<view class="colidcard hinttext">身份证</view>
+		<view class="colidnum commontext">{{driver.idno}}</view>
+	</view>
+	<!-- <view class="rownob endrow">
+		<button hover-class="buttonactive" bind:tap="onClickCars">
+			<view class="colcar commontext">我的车辆</view>
+			<view class="arrow rightarrow"></view>
+		</button>
+	</view> -->
+</view>

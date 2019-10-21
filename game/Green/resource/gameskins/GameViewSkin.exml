@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="GameViewSkin" width="1138" height="640" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="bggame_jpg"/>
+	<e:Group id="bgfar" height="440" width="940" x="101" y="141">
+	</e:Group>
+	<e:Group id="roads" height="440" width="940" x="101" y="141">
+		<e:Group id="roadbgs" height="440" width="940" x="0" y="0">
+		</e:Group>
+		<e:Group id="roadassets" height="440" width="940" x="0" y="0">
+		</e:Group>
+	</e:Group>
+	<e:Image id="imgend2" source="imgend2_png" x="170" y="62"/>
+	<e:Image id="imgend1" source="imgend1_png" x="447" y="275"/>
+	<e:Group id="chars" height="440" width="940" x="101" y="141"/>
+	<e:Image source="msk_png" id="msk"/>
+	<e:Image id="timebar" source="timebar_png" x="610" y="85" scale9Grid="10,1,199,11"/>
+	<e:BitmapLabel id="txtscore" x="896" y="69" text="0" width="130" height="46" font="fnt_json"/>
+	<e:Image id="hint" source="hint_png" x="121" y="145"/>
+	<e:Group id="btnacc" height="200" width="200" x="838" y="428">
+		<e:Image source="btnacc_png" x="10" y="18"/>
+		<e:Image id="imgleft" source="num3_png" x="149" y="84"/>
+	</e:Group>
+	<e:Group id="guides" height="640" width="1138" x="0" y="0" visible="false">
+		<e:Image id="guide1" source="guide1_png" x="100" y="151"/>
+		<e:Button id="btnNext" label="按钮" y="401" skinName="btnNextSkin" x="488"/>
+		<e:Image id="guide2" source="guide2_png" x="100" y="151"/>
+		<e:Button id="btnNext2" x="498" y="411" label="按钮" skinName="btnNextSkin"/>
+		<e:Image id="guide3" source="guide3_png" x="100" y="151"/>
+		<e:Button id="btnGo" label="按钮" y="511" skinName="btnGoSkin" x="404"/>
+		<e:Image id="btnSkip" source="btnskip_png" x="938" y="168"/>
+	</e:Group>
+
+
+</e:Skin>

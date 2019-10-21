@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="RuleViewSkin" width="1138" height="640" xmlns:e="http://ns.egret.com/eui">
+	<e:Image source="bgstart_jpg"/>
+	<e:Image source="roundstart_png" x="-156" y="-46" id="r2"/>
+	<e:Image source="roundstart_png" x="384" y="372" id="r1"/>
+	<e:Image source="rule2_png" x="602" id="r3"/>
+	<e:Image source="rule1_png" x="129" y="66" />
+	<e:Image source="rule3_png" x="115" y="214" id="rp"/>
+	<e:Button label="按钮" x="839" y="344" skinName="btnStartSkin" id="btnstart"/>
+</e:Skin>

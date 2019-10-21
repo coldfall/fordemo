@@ -1,0 +1,45 @@
+<!--pages/main/index.wxml-->
+<map class="mapmain" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" polyline="{{polyline}}"></map>
+<view class="swp">
+
+
+	<view  class="container callservice">
+		<view class="callinfo grayshadow">
+			<view class="info infocar">
+				<view class="infoicon"><image  src="/res/icons/iconpos1.png" mode="widthFix"></image></view>
+				<view class="infotitle">救援位置</view>
+				<view type="text" class="infotxt" >{{order.myaddress}}</view>
+			</view>
+			<view class="info infoloc">
+				<view class="infoicon"><image  src="/res/icons/iconpos2.png" mode="widthFix"></image></view>
+				<view class="infotitle">目的地位置</view>
+				<view type="text" class="infotxt" ><input data-city="{{city}}" data-longitude="{{longitude}}" data-latitude="{{latitude}}" bindtouchstart="bindInput" placeholder="点此搜索" value="{{mkname}}"/></view>
+			</view>
+			<view class="info map_text">
+			  <text class="h1">{{textData.name}}</text>
+			  <text>{{textData.desc}}</text>
+			</view>
+
+		</view>
+		<view class="panelfee grayshadow" wx:if="{{feeobj!=null}}">
+			<view class="rowtitle">
+				<view class="icon"><image  src="/res/icons/iconlist_car{{feeobj.serviceid}}.png" mode="widthFix"></image></view>
+				<view class="title">{{feeobj.servicename}}</view>
+				<view class="time">{{feeobj.currenttime}}</view>
+			</view>
+
+			<view class="feeinfo">
+				<view class="left">拖车费用</view>
+				<view class="right">￥{{feeobj.amt}}</view>
+			</view>
+			<view class="feeinfo">
+				<view class="left">其他费用</view>
+				<view class="right">￥0.00</view>
+			</view>
+			<view class="fee">合计费用:<text class="money">￥</text><text class="num">{{feeobj.amt}}</text></view>
+		</view>
+		<view class="rownob rowbtn"><button class="bigbutton  {{feeobj==null?'btndisable':''}}" hover-class='buttonactive' bind:tap="onClickConfirm">确认</button></view>
+	</view>
+
+
+</view>

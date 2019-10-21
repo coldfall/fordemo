@@ -1,0 +1,30 @@
+<!--pages/userinfo/index.wxml-->
+
+<view class='content'>
+	<view class="rownob bigtitle">
+	请完善您的信息
+	</view>
+	<view class="crow commontext">请点击头像获取微信信息</view>
+	<view class="rowhead"><button open-type="getUserInfo" class="headbtn" bindgetuserinfo="onGetUserInfo"><image  src="{{headurl}}" mode="widthFix" /></button></view>
+	<view class="crow commontext">昵称</view>
+	<view class="crowborder"><text class="nickname">{{nickname}}</text></view>
+	<view class="crow" style="height:20rpx;"></view>
+	<view class="crow commontext">手机号码</view>
+	<view class="crowborder"><text class="mymobile">{{mobile}}</text></view>
+	<view class="crow" style="height:20rpx;"></view>
+	<view class="crow commontext">真实姓名</view>
+	<view class="crowborder"><input type="text" class="inputs" placeholder="输入你的真实姓名" value="{{realname}}" bindinput="onInputRealName"/></view>
+	<view class="crow" style="height:20rpx;"></view>
+	
+	<view class="crow commontext">性别</view>
+	<view class="rowborder rowgender">
+		<view class="con">
+			<button class="smallbutton {{gender==1?'on':''}}" data-gender="1" bind:tap="onChangeGender">男</button>
+			<button class="smallbutton {{gender==2?'on':''}}" data-gender="2" bind:tap="onChangeGender">女</button>
+		</view>
+	</view>
+	
+	<view class="crow"></view>
+	<view class="rownob"><button class='bigbutton' hover-class='buttonactive' bind:tap="onClickSubmit">提交</button></view>
+	<view class="crow"></view>
+</view>

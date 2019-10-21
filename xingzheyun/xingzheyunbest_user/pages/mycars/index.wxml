@@ -1,0 +1,22 @@
+<!--pages/mycars/index.wxml-->
+<view class="content">
+	<view class="rowcars" wx:for="{{cardata}}">
+		<view class="colleft"><view class="carlogo"><image src="{{item.logo}}" mode="widthFix"></image></view></view>
+		<view class="colmiddle">
+			<view class="carnum">{{item.car_no}}</view>
+			<view class="cardetail">{{item.color}}   {{item.name}}</view>
+		</view>
+		<view class="colright">
+			<button class="btnedit" hover-class="buttonactive" data-brandid="{{item.car_brand}}" data-id="{{item.car_id}}" bind:tap="onClickEdit">编辑</button>
+			<button class="btndelete" hover-class="buttonactive" data-brandid="{{item.car_brand}}" data-id="{{item.car_id}}" bind:tap="onClickDelete">删除</button>
+		</view>
+	</view>
+
+
+
+	<view class="rownob rowbtn"><button class='bigbutton' hover-class='buttonactive' bind:tap="onClickAdd">添加爱车</button></view>
+
+	<import src="../templates/navigator.wxml" />
+   	<template is="nsNavigator" />
+	
+</view>

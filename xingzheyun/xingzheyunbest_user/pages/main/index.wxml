@@ -1,0 +1,54 @@
+<!--pages/main/index.wxml-->
+<map class="mapmain" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" polyline="{{polyline}}"></map>
+<view class="swp">
+	<view wx:if="{{showpanel==1}}" class="container containerservice" >
+		<view class="title">您需要什么服务？</view>
+		<view class="floathint grayshadow" wx:if="{{ordersinline.length>0}}" bind:tap="onClickOrderList">
+				<view class="caricon"></view>
+				<view class="hintword">您有 <text class="red">{{ordersinline.length}}</text> 个服务正在进行中...</view>
+				<view class="arrow rightarrow"></view>
+		</view>
+		<view class="services" wx:if="{{ordersinline.length==0}}">
+
+			<view wx:for="{{services}}" class="servbtn {{index%2==0?'btnleft':'btnright'}}" hover-class="buttonactive" hover-stay-time="50" data-id="{{item.service_id}}" data-name="{{item.name}}" bind:tap="onClickService">
+				<view class="circle"><image src="{{imgurl+item.icon}}" mode="widthFix"/></view>
+				<view class="cap">{{item.name}}</view>
+			</view>
+			
+<!-- 			<view class="servbtn btnleft" hover-class="buttonactive" hover-stay-time="50">
+				<view class="circle"><image src="/res/icons/serviceicon7.png"  mode="widthFix"/></view>
+				<view class="cap">一键运车</view>
+			</view>	 -->		
+		</view>
+		<import src="../templates/navigator.wxml" />
+    	<template is="nsNavigator" />
+	</view>
+
+	<view wx:if="{{showpanel==2}}" class="container callservice">
+		<view class="callinfo grayshadow">
+			<view class="info infocar">
+				<view class="infoicon"><image  src="/res/icons/iconcall1.png" mode="widthFix"></image></view>
+				<view class="infotitle">出险车辆</view>
+				<picker range="{{mycars}}" range-key="carInfo" bindchange="onCarChange">
+					<view class="infotxt">{{carsel.carInfo}}</view>
+				</picker>
+			
+			</view>
+			<view class="info infoloc">
+				<view class="infoicon"><image  src="/res/icons/iconcall2.png" mode="widthFix"></image></view>
+				<view class="infotitle">出险位置</view>
+				<input type="text" class="infotxt" value="{{address}}"></input>
+			</view>
+		</view>
+
+		<view class="rownob rowbtn"><button class='bigbutton' hover-class='buttonactive' bind:tap="onClickCall">确认呼叫救援</button></view>
+	</view>
+
+	<view class="fullshadow panelsuc" wx:if="{{showsuccess}}">
+			<view class="sucwrapper">
+				<image class="kv" src="/res/images/regsuc.jpg" mode="widthFix"></image>
+				<button class='btnconfirm' hover-class='buttonactive' bind:tap="onClickConfirmSuc">确认</button>
+			</view>
+	</view>
+
+</view>

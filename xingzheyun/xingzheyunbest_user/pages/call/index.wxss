@@ -1,0 +1,141 @@
+/* pages/call/index.wxss */
+
+.formrow{
+	width: 100%;
+	height: 170rpx;
+	margin-bottom: 44rpx;
+	padding-left: 30rpx;
+	padding-right: 30rpx;
+	clear: both;
+}
+
+.formrow.first{
+	height: 220rpx;
+}
+
+.formrow .title{
+	width: 100%;
+	text-align: left;
+	height: auto;
+	font-size: 36rpx;
+	padding-top: 10rpx;
+	padding-bottom: 10rpx;
+	color: #000000;
+}
+
+.formrow .formcontent{
+	width: 100%;
+	text-align: left;
+	height: auto;
+	font-size: 30rpx;
+	padding-top: 10rpx;
+	padding-bottom: 10rpx;
+	color: #000000;
+}
+
+.btnstatus{
+	width: 268rpx;
+	height: 150rpx;
+	float: left;
+	margin-right: 32rpx;
+	background-color: #3d73dd;
+	border-radius: 10rpx;
+	overflow: hidden;
+
+}
+
+.btnstatus .statusbtn{
+	position: absolute;
+	width: 268rpx;
+
+
+
+}
+
+.btnstatus.on .statusbtn{
+	opacity: 0.3;
+
+
+
+}
+
+
+.btnstatus .btntitle{
+	position: absolute;
+	width: 268rpx;
+	height: 150rpx;
+	text-align: center;
+	font-size: 30rpx;
+	display: table-cell;
+	vertical-align: middle;
+	color: #FFFFFF;
+	line-height: 150rpx;
+
+
+}
+
+.checkbtn{
+	width: 210rpx;
+	height: 88rpx;
+	text-align: center;
+	float: left;
+	margin-right: 28rpx;
+	color: #333333;
+	font-size: 30rpx;
+	background-color: #f6f7fa;
+	line-height: 88rpx;
+	border-radius: 10rpx;
+	overflow: hidden;	
+}
+
+.checkbtn.on{
+	background-color: #3d73dd;
+	color: #FFFFFF;
+}
+
+.checkbtn:last-child{
+	margin-right: 0rpx;
+}
+
+.formrow.textrow{
+	height: auto;
+}
+
+.inputwrapper{
+	width: 690rpx;
+	height: 285rpx;
+	background-color: #f6f7fa;
+	padding: 30rpx;
+	border-radius: 10rpx;
+	overflow: hidden;
+}
+
+.inputwrapper textarea{
+	background:none;
+	border:none;
+	width: 635rpx;
+	height: 193rpx;
+	text-align: left;
+	font-size: 30rpx;
+	color: #333333;
+
+}
+
+
+
+.inputwrapper .textcnt{
+	float: right;
+	width: 93rpx;
+	height: 32rpx;
+	text-align: right;
+	color: #b8b9c6;
+	font-size: 26rpx;
+}
+
+
+.rowbtn{
+	position: fixed;
+	clear: both;
+	bottom: 90rpx;
+	width: 100%;
+}

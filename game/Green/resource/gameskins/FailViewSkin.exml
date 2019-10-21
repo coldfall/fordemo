@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="FailViewSkin" width="1138" height="640" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="bgfail_jpg"/>
+	<e:Button id="btnagain" label="按钮" x="711" y="406" skinName="btnReStartSkin"/>
+	<e:Image id="f1" source="fail_4_png" x="109" y="57"/>
+</e:Skin>

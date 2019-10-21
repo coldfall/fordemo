@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="LoaderViewSkin" width="1138" height="640" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="loading_png"/>
+	<e:Label id="num" text="0%" x="792" y="260" width="137" height="61" verticalAlign="middle" textAlign="center" textColor="0x7fb328"/>
+</e:Skin>

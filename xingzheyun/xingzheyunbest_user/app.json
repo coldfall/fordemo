@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/main/index",
+    "pages/call/index",
+    "pages/confirm/index",
+    "pages/progress/index",
+    "pages/reg/index",
+    "pages/orders/index",
+    "pages/orderdetail/index",
+    "pages/myinfo/index",
+    "pages/mycars/index",
+    "pages/addcar/index",
+    "pages/userinfo/index",
+    "pages/inputtips/input",
+    "pages/continue/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "行者云",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于呼叫救援车辆和显示救援流程"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

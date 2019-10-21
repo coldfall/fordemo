@@ -1,0 +1,8 @@
+<!--pages/submitsuc/index.wxml-->
+<view class='content'>
+
+	<view class="sucpic"><image src="/res/icons/iconinterview.png" mode="widthFix"></image></view>
+	<view class="crow commontext texttitle">申请提交成功</view>
+	<view class="crow rowcontact"><text class='smalltext'>请耐心等待审核，审核时间预计为2-3个工作日
+若有问题，请联系客服</text><text class='smalllinktext'>400-000-0000</text></view>
+</view>

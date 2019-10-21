@@ -1,0 +1,197 @@
+/* pages/progress/index.wxss */
+.mapmain{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.swp{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.container{
+	position: absolute;
+	padding: 30rpx;
+}
+
+
+.callinfo{
+	width: 690rpx;
+	height: 196rpx;
+	background-color: #FFFFFF;
+	margin: auto;
+	border-radius: 10rpx;
+	
+	background-repeat: no-repeat;
+	background-position: 647rpx center;
+
+}
+
+.callinfo .info{
+	width: 90%;
+	height: 50%;
+	margin: auto;
+
+	float: none;
+}
+
+.callinfo .info .infoicon{
+	width: 49rpx;
+	height:  100%;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+}
+
+.callinfo .info .infoicon image{
+	width: 28rpx;
+}
+
+
+.callinfo .info .infotitle{
+	width: 139rpx;
+	height:  100%;
+	text-align: left;
+	color: #b8b9c6;
+	font-size: 28rpx;
+	line-height: 98rpx;
+	float: left;
+	padding-left: 10rpx;
+}
+
+.callinfo .info .infotxt{
+	width: 427rpx;
+	height:  100%;
+	text-align: left;
+	padding-left: 5rpx;
+	color: #333333;
+	font-size: 28rpx;
+	line-height: 98rpx;
+	float: left;
+	display: block;
+}
+
+
+.container .rownob.rowbtn{
+	width: 750rpx;
+	position: fixed;
+	bottom: 70rpx;
+	margin-left: -375rpx;
+	left: 50%;
+}
+
+.panelfee{
+	width: 690rpx;
+	height: 353rpx;
+	margin: auto;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArIAAAFhCAYAAACMO0mcAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAACaxJREFUeNrs3U2IlHUcwPFnZ3YX3NDNQ/SiBCEKKhjkPTKxYxAppqJUp4JSN6tjeKpDaRGEHaJXei/y0CGILOiahwQlzG6lQiddWtv15en3Z2ZgG9x5e54dZ+TzgR+u4/zH5f9cvvyZmWckz/OshVtiNsbcngEAQH/MxZyPORUzvdCTRhd4/IGYqZgtMUvsJQAAN8CVmO9j3oz5rvkfR5pOZG+LeSfmYfsGAMAA+TbmyZi/rxeyK2N+illlnwAAGEBnYjbF/Dk/ZCdifo65z/4AADDAjsfcHzNTqT/wiogFAGAIpC8ieDn9kE5k744/f48Zty8AAAyB9K0Gq9OJ7G4RCwDAEEntuieF7EP2AgCAIbMlhew99gEAgCGzLr1HNr3HYMxeAAAwRPIUsrl9AABg2FRsAQAAQhYAAIQsAAAIWQAAhCwAAAhZAAAQsgAACFkAABCyAAAgZAEAQMgCACBkAQBAyAIAgJAFAEDIAgCAkAUAACELAICQBQAAIQsAAEIWAACELAAAQhYAAIQsAAAIWQAAhCwAAAhZAAAQsgAACFkAABCyAAAgZAEAQMgCACBkAQBAyAIAgJAFAEDIAgCAkAUAACELAICQBQAAIQsAAEIWAACELAAAQhYAAIQsAAAIWQAAhCwAAAhZAAAQsgAACFkAABCyAAAgZAEAQMgCACBkAQBAyAIAgJAFAEDIAgCAkAUAACELAICQBQAAIQsAAEIWAACELAAAQhYAAIQsAAAIWQAAhCwAAAhZAAAQsgAAIGQBABCyAAAgZAEAQMgCACBkAQBAyAIAgJAFAEDIAgCAkAUAACELAABCFgAAIQsAAEIWAACELAAAQhYAAIQsAAAIWQAAhCwAAAhZAAAQsgAAIGQBABCyAAAgZAEAQMgCACBkAQBAyAIAgJAFAEDIAgCAkAUAACELAABCFgAAIQsAAEIWAAA6NBpza8yFmMn6rInZELMpZnPMEtsEAMANdCnmWH1OxJxO/TqS53mrRSlsH405ELPOHgIA0EcnYw7HfJ3VDl7/p13INqS3IGyPORRzpz0FAGARnctqB6mfx1xb6EmdhmzDspgjMTvtLwAAi+DTmKdiLrZ7Yrcf9kovuCvmuZjcPgMAUJK83pg7O4nYpNsT2fl2x7wXU7XvAAAUjNgnYj7oZlGRr9/6KGa/fQcAoKDnu43YpMiJbMMnMTvsPwAAPfis15YsI2TTB8BOxaxwHQAA6MLZmLVZh++JbVbGnb3Sf/yi6wAAQJde6DVikzJOZBtBnO6ysN71AACgA+lmB+lusteKBGgZ0i/wuusBAECHDheJ2KSsE9lkacz5mAnXBQCAFmay2t1iLxZ5kUqJv9B0zDHXBQCANn4sGrFlh2zjlwIAgFZKOfwcLfmX+vV6D/4zMxsz13Lh8smJbGysap111llnnXXWWWfdTbiuyYkywrN68ODBMkP2asxU84PjY6NZtVLJZueuLLjw39nLWbVayUZHq9ZZZ5111llnnXXW3WTrmrwUc6FoeJb5Ya8kfeDrYgYAAAubLKMZyw7ZJHdtAABo1aBlvEjZH/Za6roAANDGskEM2eWuCwAA/WjGskN2tesCAEA/mrHskL3XdQEAoI0Ngxiym1wXAAD60YxlfmtB+qDX+ZgJ1wYAgBZmYu6ImS7yImWeyG4TsQAAdGCi3o6FlHUim4I43WpsvesCAEAHTma198peKxKgZdguYgEA6EJqx8eKvEAZJ7LpC21PxaxwPQAA6MLZmLVZj7erLeNE9m0RCwBAD+6qt2RPiobsvpgdrgEAAD1KLbm/l4VF3lqwJ+b99Br2HwCAAlKQPh7zYTeLej2R3RvzrogFAKAEI/W23NvVoi5PZNNND47E7LLfAAAsgo9jns46uFlCpyey6Xnp/Qu/iVgAABbRrnpz7mjXqu1OZNMJ7NaYA5nviQUAoL/STRMOxXyVXeeENoVs+h7Y9N1d6c/JmDVZ7S4LD8ZsjlliDwEAuIEuxfwQcyyr3U32dMyFFLK5vQEAYNhUbAEAAEIWAACELAAACFkAAIQsAAAIWQAAELIAAAhZAAAQsgAAIGQBAEDIAgAgZAEAQMgCAICQBQBAyAIAgJAFAAAhCwCAkAUAACELAABCFgAAhCwAAEIWAACELAAACFkAAIQsAAAIWQAAELIAAAhZAAAQsgAAIGQBAEDIAgAgZAEAQMgCAICQBQBAyAIAgJAFAAAhCwCAkAUAACELAABCFgAAhCwAAEIWAACELAAACFkAAIQsAAAIWQAAELIAAAhZAAAQsgAAIGQBAEDIAgAgZAEAQMgCAICQBQBAyAIAgJAFAAAhCwCAkAUAACELAABCFgAAhCwAAEIWAACELAAACFkAAIQsAAAIWQAAELIAACBkAQAQsgAAIGQBAEDIAgAgZAEAQMgCAICQBQBAyAIAgJAFAAAhCwAAQhYAACELAABCFgAAhCwAAEIWAACELAAACFkAAIQsAAAIWQAAELIAACBkAQAQsgAAIGQBAEDIAgAgZAEAQMgCAICQBQBAyAIAgJAFAAAhCwAAQhYAACELAABCFgAAhCwAAEIWAACELAAACFkAAIQsAAAIWQAAELIAACBkAQAQsgAAIGQBAEDIAgAgZAEAQMgCAICQBQBAyAIAgJAFAAAhCwAAQhYAACELAABCFgAAhCwAAEIWAACELAAACFkAAIQsAAAIWQAAELIAACBkAQAQsgAAIGQBAEDIAgAgZAEAQMgCAICQBQAAIQsAgJAFAAAhCwAAQhYAACELAABCFgAAhCwAAEIWAACELAAACFkAABCyAAAIWQAAELIAACBkAQAQsgAAIGQBAEDIAgAgZAEAQMgCAICQBQAAIQsAgJAFAAAhCwAAQhYAACELAABCFgAAhCwAAEIWAACELAAACFkAABCyAAAIWQAAELIAACBkAQAQsgAAIGQBAEDIAgAgZAEAQMgCAICQBQAAIQsAgJAFAAAhCwAAQhYAACELAABCFgAAhCwAAEIWAACELAAACFkAABCyAAAIWQAAELIAACBkAQAQsgAAIGQBAEDIAgAgZAEAQMgCAED/QnbaNgAAMGTmUsiesw8AAAyZcylkT9gHAACGzC8pZI/aBwAAhszRkTzPx+OHP2JW2g8AAIbAXzGr0onsXMwB+wEAwJCYipltfP3WFzGv2RMAAAbcqzFfph/SWwsaD1Zj3oh5xv4AADCA3orZF3M1/WX+DRHSA8/GbI05Y58AABgQqU23ZbUD16uNB+efyM43Xn/yIzEbY1bEjNlDAAD64HJW+0DX8ZhvstpbCeaan/SfAAMAOKUWfO4m80sAAAAASUVORK5CYII=');
+	position: fixed;
+	bottom: 218rpx;
+	padding-left: 26rpx;
+	padding-right: 26rpx;
+	padding-top: 23rpx;
+	padding-bottom: 23rpx;	
+}
+
+.panelfee .rowtitle{
+	width: 636rpx;
+	height: 81rpx;
+	margin: auto;
+	padding: 13rpx;
+	margin-bottom: 51rpx;
+}
+
+.panelfee .rowtitle .icon{
+	width: 62rpx;
+	height: 62rpx;
+	border-radius: 31rpx;
+	background-color: #f2f5ff;
+	text-align: center;
+	line-height: 62rpx;
+	overflow: hidden;
+	float: left;
+
+}
+
+.panelfee .rowtitle .icon image{
+	width: 39rpx;
+}
+
+.panelfee .rowtitle .title{
+	width: 250rpx;
+	height: 62rpx;
+	line-height: 62rpx;
+	float: left;
+	margin-left: 10rpx;
+	text-align: left;
+	color: #333333;
+	font-size: 32rpx;
+
+}
+.panelfee .rowtitle .status{
+	width: 283rpx;
+	height: 42rpx;
+	line-height: 42rpx;
+	float: right;
+
+	text-align: right;
+	color: #3d73dd;
+	font-size: 28rpx;
+
+}
+.panelfee .rowtitle .time{
+	width: 283rpx;
+	height: 42rpx;
+	line-height: 42rpx;
+	float: right;
+
+	text-align: right;
+	color: #b8b9c6;
+	font-size: 28rpx;
+
+}
+
+.panelfee .feeinfo{
+	width: 626rpx;
+	height: 54rpx;
+	margin: auto;
+	font-size: 28rpx;
+}
+.panelfee .feeinfo .left{
+	width: 70%;
+	height: 54rpx;
+	float: left;
+	text-align: left;
+	color: #b8b9c6;
+}
+.panelfee .feeinfo .right{
+	width: 30%;
+	height: 54rpx;
+	float: left;
+	text-align: right;
+	color: #333333;
+}
+
+.panelfee .fee{
+	width: 626rpx;
+	height: 60rpx;
+	margin: auto;
+	color: #333333;
+	font-size: 30rpx;
+	line-height: 60rpx;
+	text-align: right;
+}
+
+.panelfee .fee .money{
+	font-size: 26rpx;
+	color: #3d73dd;
+}
+
+.panelfee .fee .num{
+	font-size: 36rpx;
+	color: #3d73dd;
+}

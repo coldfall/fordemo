@@ -1,0 +1,38 @@
+/**index.wxss**/
+page {
+  width: 100%;
+  height: 100%;
+}
+.cropcontainer {
+  width: 100%;
+  height: 100%;
+  padding:0rpx;
+  background: #eee;
+  overflow: hidden;
+}
+.cropper {
+  width: 100%;
+  height: 100%;
+}
+.img {
+  margin: 0rpx auto;
+  display: block;
+  background: #fff;
+}
+.choose-img {
+  width: 40%;
+  text-align: center;
+  padding: 0rpx;
+  border: 1px solid #fff;
+  margin: 0rpx auto;
+  background: #000;
+  color: #fff;
+}
+.canvasresize{
+  width: 200rpx;
+  height: 200rpx;
+  display: block;
+  opacity: 0;
+  position: absolute;
+  left: -1000000rpx;
+}

@@ -1,0 +1,46 @@
+<!--pages/addcar/index.wxml-->
+<view class="content">
+	<view class="rowborder">
+		<view class="left">车牌号</view>
+		<view class="middle">
+			<picker mode="multiSelector" range="{{scodes}}"  bindchange="onScodeChange"  value="{{scodes[0][scodeindex[0]]+scodes[1][scodeindex[1]]}}">
+				<view class="arrow downarrow"></view>
+				<view class='commontext' >{{scodes[0][scodeindex[0]]+scodes[1][scodeindex[1]]}}</view>
+
+			</picker>
+		</view>
+		<view class="right"><input type="text" class="iptcode" placeholder="请输入车牌号" value="{{carnum}}" bindinput="onInputNum"/></view>
+	</view>
+	<view class="rowborder">
+		<view class="left">车型品牌</view>
+		<view class="middle">
+			
+		</view>
+		<view class="right">
+			<picker mode="multiSelector" range="{{cartype}}" bindcolumnchange="onCarColChange" bindchange="onCarListChange"  value="{{cartypeindex}}">
+				<view class="arrow rightarrow"></view>
+				<view class='commontext' >{{carbrandname}}</view>
+
+			</picker>
+
+		</view>
+	</view>
+	<view class="rowborder">
+		<view class="left">车辆颜色</view>
+		<view class="middle">
+			
+		</view>
+		<view class="right">
+			<picker mode="selector" range="{{carcolor}}"  bindchange="onColorChange" value="{{carcolor[colorindex]}}">
+				<view class="arrow rightarrow"></view>
+				<view class='commontext' >{{carcolor[colorindex]}}</view>
+
+			</picker>
+
+		</view>
+	</view>	
+
+
+	<view class="rownob rowbtn"><button class='bigbutton' hover-class='buttonactive' bind:tap="onSubmitCar">确认</button></view>
+	
+</view>

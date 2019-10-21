@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="btnNextSkin" states="up,down,disabled" width="157" height="43"
+        xmlns:e="http://ns.egret.com/eui">
+	<e:Image source="btnnext_png" width.down="128" height.down="35" y.down="4" x.down="15"/>
+</e:Skin>

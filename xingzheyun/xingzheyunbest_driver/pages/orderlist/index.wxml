@@ -1,0 +1,66 @@
+<!--pages/orderlist/index.wxml-->
+<view class="content">
+	
+	<view class="navis">
+		
+		<view class="naviitem"><navigator class="on">订单列表</navigator></view>
+		<view class="naviitem"><navigator class="off"  url="/pages/myinfo/index" open-type="redirect">个人信息</navigator></view>
+	</view>
+
+	<scroll-view class="listwrapper" scroll-y="true">
+		<view class="order" wx:for="{{orders}}" wx:for-item="order" wx:if="{{order.order_status<=5}}">
+			<view class="ordertime">
+				<text class="date">{{order.datepart}}</text>
+				<text class="year" >{{order.monthpart}} \n{{order.weekpart}}</text>
+				<text class="time">{{order.timepart}}</text>
+			</view>
+			<view class="orderdetail">
+				<view class="statusbar">
+					<text class="ordertag">预约</text>
+					<text class="ordertitle">{{order.service_name}}</text>
+					<text class="ordertype">故障车</text>
+					<text class="orderstatus">{{order.statustext}}</text>
+				</view>
+			</view>
+			<view class="orderpos">
+				<view class="pos posstart">
+					<view class="icon"><image src="/res/icons/icondot.png" mode="widthFix"></image></view>
+					<view class="distance">救援地</view>
+					<view class="address">{{order.user_address}}</view>
+				</view>
+				<view class="pos posend">
+					<view class="icon"><image src="/res/icons/iconarrow.png" mode="widthFix"></image></view>
+					<view class="distance">目的地</view>
+					<view class="address">{{order.shop_address}}</view>
+				</view>
+			</view>
+			<view class="crow inforow">
+				<view class="left hinttext">订单号</view>
+				<view class="right commontext">{{order.orderno}}</view>
+			</view>
+			<view class="crow inforow">
+				<view class="left hinttext">车辆信息</view>
+				<view class="right commontext">{{order.color}} {{order.name}} {{order.car_no}}</view>
+			</view>
+			<view class="crow inforow">
+				<view class="left hinttext">救援时间</view>
+				<view class="right commontext">{{order.createtime}}</view>
+			</view>
+
+			<view class="messagerow">{{order.order_desc}}</view>
+			<view class="servicerow">
+				
+				<button class="smallbutton on" wx:if="{{order.order_status==0}}" bind:tap="onReceive" data-orderid="{{order.orderid}}">接单</button>
+
+				<button class="smallbutton" wx:if="{{order.order_status==0}}" bind:tap="onRedirect" data-orderid="{{order.orderid}}">改派</button>
+				<button class="smallbutton detailbtn" wx:if="{{order.order_status==4||order.order_status==5}}" bind:tap="onDetail" data-orderid="{{order.orderid}}">订单详情</button>
+				
+			</view>
+		</view>
+		
+		<view class="noorder" wx:if="{{orders.length==0}}">暂无数据</view>
+	</scroll-view>
+
+
+</view>	
+

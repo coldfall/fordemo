@@ -1,0 +1,28 @@
+<!--pages/userinfo/index.wxml-->
+
+<view class='content'>
+	<view class="rownob bigtitle">
+	请完善您的信息
+	</view>
+	<view class="crow commontext">请上传真实本人头像</view>
+	<view class="rowhead" bindtap='onClickSelect'><image  src="{{photourl}}" mode="widthFix" /></view>
+	<view class="crow commontext">真实姓名</view>
+	<view class="crowborder"><input type="text" class="inputs" placeholder="输入你的真实姓名" bindinput="onInputName"/></view>
+	<view class="crow"></view>
+	<view class="crow commontext">身份证号</view>
+	<view class="crowborder"><input type="text" class="inputs" placeholder="输入你的身份证号码"  bindinput="onInputCode"/></view>
+	<view class="crow"></view>
+	<view class="crow commontext">性别</view>
+	<view class="rowborder rowgender">
+		<view class="con">
+			<button class="smallbutton {{gender==1?'on':''}}" data-gender="1" >男</button>
+			<button class="smallbutton {{gender==2?'on':''}}" data-gender="2" >女</button>
+		</view>
+	</view>
+	<view class="crow"></view>
+	<view class="crow commontext">年龄</view>
+	<view class="crowborder"><input type="number" class="inputs" placeholder="输入你的年龄" value="{{age}}" bindinput="onInputAge"/></view>
+	<view class="crow"></view>
+	<view class="rownob"><button class='bigbutton' hover-class='buttonactive' bind:tap="onSubmitInfo">提交</button></view>
+	<view class="crow"></view>
+</view>

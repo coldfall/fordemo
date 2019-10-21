@@ -1,0 +1,36 @@
+<!--pages/userinfo/index.wxml-->
+
+<view class='content'>
+	<view class="rownob bigtitle">
+	服务照片上传
+	</view>
+	<view class="crow commontext crowtitle" wx:if="{{serviceid==1||serviceid==2||serviceid==7}}">现场照片</view>
+	<view class="crow commontext rowcontent" wx:if="{{serviceid==1||serviceid==2||serviceid==7}}">
+		<view class="item"><text class="red">*</text>1.车牌照</view>
+		<view class="item"><text class="red">*</text>2.车架照</view>
+		<view class="item"><text class="red">*</text>3.车辆外观照</view>
+		<view class="item"><text class="red">*</text>4.装车照</view>
+	</view>
+	<view class="crow commontext crowtitle" wx:if="{{serviceid==1||serviceid==2||serviceid==7}}">目的地照片</view>
+	<view class="crow commontext rowcontent" wx:if="{{serviceid==1||serviceid==2||serviceid==7}}">
+		<view class="item"><text class="red">*</text>1.卸车照</view>
+		<view class="item"><text class="red">*</text>2.目的地门头照</view>
+		<view class="item"><text class="red">*</text>3.车辆外观照</view>
+		<view class="item"><text class="red">*</text>4.工单照</view>
+	</view>
+	<view class="crow commontext crowtitle" wx:if="{{serviceid==3||serviceid==4||serviceid==5||serviceid==6}}">现场照片</view>
+	<view class="crow commontext rowcontent" wx:if="{{serviceid==3||serviceid==4||serviceid==5||serviceid==6}}">
+		<view class="item"><text class="red">*</text>1.车牌照</view>
+		<view class="item"><text class="red">*</text>2.车架照</view>
+		<view class="item"><text class="red">*</text>3.车辆外观照</view>
+		<view class="item"><text class="red">*</text>4.装车照</view>
+		<view class="item"><text class="red">*</text>5.服务过程照片</view>
+	</view>		
+	<view class="crow rowclear"></view>
+	
+	<view class="crow rowpics">
+      <view class="viewimg" wx:for="{{uploadfilearray}}"><view class="btndel"  wx:if="{{isfinished==false}}" bind:tap="onDelPic"  data-src="{{item}}"></view><image  src="{{item}}"  data-src="{{item}}" mode="aspectFill" bind:tap="previewImg"></image></view><button class='buttonupload' hover-class='buttonactive' bind:tap="onClickUpload" wx:if="{{uploadfilearray.length<photoneed&&isfinished==false}}"></button>
+  </view>
+	<view class="rownob bottomrow" wx:if="{{isfinished==false}}"><button class='bigbutton' hover-class='buttonactive' bind:tap="onClickConfirm">提交</button></view>
+	<view class="crow"></view>
+</view>

@@ -1,0 +1,167 @@
+/* pages/orders/index.wxss */
+
+@import "../templates/navigator.wxss";
+
+.mapmain{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.swp{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.container{
+	height: auto;
+	padding: 30rpx;
+	padding-bottom: 300rpx;
+}
+
+.noorder{
+	width: 100%;
+	height: 390rpx;
+	text-align: center;
+	color: #999999;
+}
+
+.order{
+	width: 100%;
+	height: 390rpx;
+}
+
+.order .titlerow{
+	width: 100%;
+	height: 92rpx;
+	border-bottom: solid 1rpx #eeeeee;
+
+}
+
+.order .titlerow .icon{
+	width: 62rpx;
+	height: 62rpx;
+	border-radius: 31rpx;
+	background-color: #f2f5ff;
+	text-align: center;
+	line-height: 62rpx;
+	margin-left: 30rpx;
+	float: left;
+}
+
+.order .titlerow .icon image{
+	width: 39rpx;
+}
+
+
+
+.order .titlerow .title{
+	float: left;
+	width: 350rpx;
+	height: 62rpx;
+	text-align: left;
+	font-size: 32rpx;
+	color: #333333;
+	line-height: 62rpx;
+	margin-left: 10rpx;
+}
+
+
+.order .titlerow .status{
+	float: right;
+	width: 210rpx;
+	height: 62rpx;
+	text-align: right;
+	font-size: 32rpx;
+	color: #3d73dd;
+	line-height: 62rpx;
+	margin-left: 10rpx;
+}
+.order .titlerow .status.gray{
+	color: #999999;
+}
+
+.order .detailrow{
+	width: 100%;
+	height: 102rpx;
+	margin-top: 30rpx;
+}
+
+.order .detailrow .loc{
+	width: 494rpx;
+	height: 52rpx;
+	float: left;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAaCAYAAACzdqxAAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAArhJREFUeNqclW1ojWEYx5/n7JisRhriA2JI85KU9+zD0ml8k3dHrfZFKSnysuXL5m1ppH1T8lLGGl9GOMsHnJlC+zSiseIYykorEWcd/K/6Hd0ezznbXPXrec59Xff/3PdzX9d1+4n2R14Omyi2ikqxQEwWafFBvBIJ0SL6wyZHQsaKRaN4K5rEOjFVfCV+NmNNxDQyJ69wmegS+/BdEDExVowXRTxj+CLEdjE3VNi2m2RFnWKeqBZ3xRcnboCxamI6mZNE4y/hcaJNlPDdKkSvN7T1EtvC3Da0/ggfFzPEA1HFIWVtpbgiXvJNb4ttztw0c+6jYVqer6ywg3lt72K+6HFEj4kafEG7IzaKb/yeI56JX2KW/esOUSiuBkR3ilrxXewX09nuFtEn1oqzTnwPGqYVN+E1OK47QVFRz/t6UiolPotWsYL3OAfoBTRiJjyTH0+cgMVikngq2kM+g634Ep+o0hnPapSZ8BSREZ+cgBKeqTwZ8SYQ61GFpjXBhAdFAcnvrshsYY6DM1vE850zVoTWgAl3M7jUCegmvSzxd4eILhfbxQ9xwxlfkj3ICM3EI3Vc28O2zoiLlPFqcYTKGy1OiPfOnKxGwvJ4GhU0SEq53WqTOEevcO2naBCHydtsN7QCGiVKoxxQK1urE7scgWviHpVlmTJGPBfNfCrX6vCbL+XTj23VL9jeKvHYG5ktoxlZec814YiTVvWc6OWw/prHilllAatOBdumVddDq3O+qz8MUZ/YUtGBxj/9OEPXssPbTJ8YymqI7eeMMrlukD5SJk1axfOImu8osRucosp55yW5HczO08iDVoHPI7ZjOJepx2HU0gJvinLHV85YITHNYQLRPFtt4OI8IG7Rf31uEOsJJ4nxRipsdpCYvRRKBE7j8/5X2ON6/ygOUfan3LTKZb8FGADtcqLgIomu7AAAAABJRU5ErkJggg==');
+	background-size: 22rpx 26rpx;
+	background-repeat: no-repeat;
+	background-position:  20rpx center;
+	padding-left: 60rpx;
+	text-align: left;
+	font-size: 28rpx;
+	color: #b8b9c6;
+	line-height: 52rpx;
+}
+
+.order .detailrow .time{
+	width: 494rpx;
+	height: 50rpx;
+	float: left;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAl9JREFUeNqslktIFWEYhqfjhEKQVCC2OAltCiRJMyLUwMggT0ouutCuEAIhXVW7yKVJkNLCFlGrrlBBJ1FcuOgiZhLVplWhHUiKis5CrBR7P3kmxmEcj8f54GFu3/++81/m+2fNwOBLJyIKRb04IvaKMlEsfokJMSIei2HxeykRN+L+aXFJbA55bkYVcEZ8FV3imvgTTE6ECGwT4+I6Bu/EBVErkmIdx1ru2/MScUWMie3L9WS3GBAbxUfRIdKB/FkxLTLihbgsUqKXntn4HxKjYT2xNxjC4ImoDBicZ9xPhfT+KfnWboMY9PfIM1kr7jHWZtQisgGhfeQfWGIes7QbQuc+uv9NOujqJ3FUzDn5xRztTWcHugsmReIcSWdZnqsJa9/OuekWmclhVsdbxjaOSKNnuk0JVobFbSfe8PQazWQXF89iNnnOsdpMtnDxOWYTTy/pstwsfuTYeD/L1B/z4qa447v33StBLut7PR/hdIS4V5NKIRilAZNN3vfj0q1y6lEmwsSK5ZQoCHk2z8fnjyTHjEtRK6fgjUSYWCFsW8Gc1HB8ZRPfz8XJmCfe0+tPUNRsP9jp+2ZWGyn0vpm+mcyIbh72+lZbvlGMjoPujFcgexjzrUxgQZ4G1u4BOu/FVX8V/iuOU9wOiocs65WE5T8SDegcQ3fRpvWBvcLmp1m8sbqTo0Ej+U20b0AvdPt9zRZsb1RFVbbGd6ltk+Inu5+Vozpxgl3RIbeFP5nIvxUT2iNaxUUEKpfpyRfRKW7wD5DTL5El9olb7DcpqnUZY5/lbcfpbZpVGhr/BBgAW1CFy44nEoIAAAAASUVORK5CYII=');
+	background-size: 25rpx 25rpx;
+	background-repeat: no-repeat;
+	background-position: 20rpx center;
+	padding-left: 60rpx;
+	text-align: left;
+	font-size: 28rpx;
+	color: #b8b9c6;
+	line-height: 50rpx;
+}
+
+
+.order .detailrow .price{
+	width: 130;
+	height: 82rpx;
+	float: right;
+	text-align: right;
+	font-size: 36rpx;
+	color: #3d73dd;
+	line-height: 82rpx;
+}
+
+.order .detailrow .price .money{
+	font-size: 26rpx;
+}
+
+
+.order .btnrow{
+	width: 100%;
+	height: 64rpx;
+	margin-top: 30rpx;
+}
+
+.order .btnrow .btndetail{
+	width: 180rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	text-align: center;
+	background-color: #f2f5ff;
+	font-size: 28rpx;
+	color: #4678de;
+	border-radius: 30rpx;
+	float: right;
+	margin-right: 30rpx;
+}
+
+
+.order .btnrow .btnprogress{
+	width: 180rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	text-align: center;
+	background-color: #3d73dd;
+	font-size: 28rpx;
+	color: #ffffff;
+	border-radius: 30rpx;
+	float: right;
+}

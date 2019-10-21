@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="FinishFailViewSkin" width="1138" height="640" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="bg" source="bgstart_jpg"/>
+	<e:Image id="r3" source="fail_3_png" x="178" y="-129"/>
+	<e:Image id="r1" source="roundstart_png" x="963" y="158"/>
+	<e:Image id="r2" source="roundstart_png" x="-142" y="-37" width="290" height="310"/>
+	<e:Image id="f1" source="fail_1_png" x="412" y="173"/>
+	<e:Image id="f2" source="fail_2_png" x="0" y="172"/>
+	<e:Image id="float" source="final_float_png"/>
+	<e:Rect id="light" height="640" width="1138" x="0" y="0" fillColor="0xFFFFFF" />
+</e:Skin>

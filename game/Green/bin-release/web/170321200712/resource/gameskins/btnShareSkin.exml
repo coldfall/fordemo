@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="btnShareSkin" states="up,down,disabled" width="203" height="53"
+        xmlns:e="http://ns.egret.com/eui">
+	<e:Image source="btnshare_png" width.down="138" height.down="41" x.down="32.5" y.down="6" anchorOffsetY.down="0"/>
+</e:Skin>

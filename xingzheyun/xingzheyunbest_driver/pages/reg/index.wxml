@@ -1,0 +1,21 @@
+<!--pages/reg/index.wxml-->
+<view class='top'>
+<image src="/res/images/regtop.jpg"  mode="scaleToFill"/>
+</view>
+<view class='content'>
+  <view class='rowborder'>
+    <picker bindchange="onNationChange" value="{{nationindex}}" range="{{nationcodes}}"><view class='commontext'>{{nationcodes[nationindex]}} ></view></picker>
+    <input class='inputs inputmobile' type="number" bindinput="onInputMobile" focus='true' placeholder='请输入手机号'  value="{{myMobile}}"></input>
+  </view>
+  <view class='rowborder'>
+    <input class='inputs inputvalid' type="number"  bindinput="onInputValid" placeholder='请输入短信验证码'></input>
+    <view class='btnvalid' bind:tap="onGetValid">{{validtext}}</view>
+  </view>
+  <view class='rownob rowgo'>
+      <button class='bigbutton' hover-class='buttonactive'  bind:tap="onSubmit">立即进入</button>
+  </view>
+  <view class='rownob'>
+      <checkbox class='ckagree' value="rulecheck" checked="{{rulechecked}}" catch:tap="onClickRuleCheck"></checkbox><text class='smalltext'>我已经阅读并同意 </text><text class='smalllinktext'>使用条款和隐私政策</text>
+  </view>
+
+</view>

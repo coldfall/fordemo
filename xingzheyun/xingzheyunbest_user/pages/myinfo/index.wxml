@@ -1,0 +1,20 @@
+<!--pages/myinfo/index.wxml-->
+<view class="content">
+	<view class="userinfotop">
+
+		<view class="infotitle">个人中心</view>
+
+		<view class="rowhead"><image  src="{{headurl}}" mode="widthFix" /></view>
+		<image src="/res/images/userback.jpg" mode="scaleToFill"></image>
+	</view>
+
+	<view class="crow rowname">{{realname}}<image class="gender" src="{{gendericon}}" mode="widthFix" /></view>
+	
+	<view class="rownob firstrow">
+		<view class="colmobile hinttext">手机号</view>
+		<view class="colmobilenum commontext">{{mobile}}</view>
+	</view>
+
+		<import src="../templates/navigator.wxml" />
+    	<template is="nsNavigator" />	
+</view>

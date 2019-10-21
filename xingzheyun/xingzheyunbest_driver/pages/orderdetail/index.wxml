@@ -1,0 +1,92 @@
+<!--pages/orderdetail/index.wxml-->
+	<view class="reachhint fullshadow" wx:if="{{showhint}}">
+		<view class="hintpanel">
+			<view class="title">温馨提示</view>
+			<view class="smtitle">你需要在服务中准备以下照片</view>
+			<view class="lists">
+				<view class="listitem">车牌照</view>
+				<view class="listitem">车架照</view>
+				<view class="listitem">行驶证照</view>
+				<view class="listitem" wx:if="{{order.service_id==1||order.service_id==2||order.service_id==7}}">车辆外观照</view>
+				<view class="listitem" wx:if="{{order.service_id==1||order.service_id==2||order.service_id==7}}">装车照</view>
+				<view class="listitem">人车合影</view>
+				<view class="listitem" wx:if="{{order.service_id==1||order.service_id==2||order.service_id==7}}">卸车照</view>
+				<view class="listitem" wx:if="{{order.service_id==1||order.service_id==2||order.service_id==7}}">目的地门头照</view>
+				<view class="listitem" wx:if="{{order.service_id==1||order.service_id==2||order.service_id==7}}">车辆外观照</view>
+				<view class="listitem" wx:if="{{order.service_id==1||order.service_id==2||order.service_id==7}}">工单照</view>
+				<view class="listitem">服务过程照片</view>
+			</view>
+			<view class="clear"></view>
+			<view class="smalltip">小贴士:截图后方便查看对比</view>
+			<button class="btnconfirm"  hover-class='buttonactive' bind:tap="onConfirmHint">知道了</button>
+		</view>
+	</view>
+<view class="content">
+
+	<view class="rowinfo">
+		<view class="colleft"><view class="head"><image src="{{user.headurl}}" mode="widthFix"></image></view></view>
+		<view class="colmiddle">
+			<view class="user">{{user.nickname}} <text class="carnum">{{car.car_no}}</text></view>
+			<view class="userinfo"><text>客户来源：微信小程序\n{{car.color+" "+car.name}}</text></view>
+		</view>
+		<view class="colright">
+			
+			<button class="btnmobile" hover-class="buttonactive" data-phone="{{user.phone}}" bind:tap="onClickCall"></button>
+		</view>
+	</view>
+	<view class="crow orderrow">
+		<view class="left hinttext">救援地</view>
+		<view class="right commontext">{{order.user_address}} </view>
+	</view>
+	<view class="crow orderrow">
+		<view class="left hinttext">位置类型</view>
+		<view class="right commontext">{{order.loctext}}</view>
+	</view>
+	<view class="crow orderrow">
+		<view class="left hinttext">救援类型</view>
+		<view class="right commontext">{{order.name}}</view>
+	</view>
+	<view class="crow orderrow">
+		<view class="left hinttext">案件号</view>
+		<view class="right commontext">{{order.orderno}}</view>
+	</view>
+
+<map class="mapmain" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" polyline="{{polyline}}"></map>
+
+	<view class="rowprogress">
+		<view class="probarback">
+			<view class="probar {{'p'+order.order_status}}"></view>
+			<view class="steps step1 {{order.order_status==1?'on':(order.order_status>0?'off':'')}}">
+				<view class="time">{{times[0]}}</view>
+				<view class="dot"></view>
+				<view class="title">接单</view>
+			</view>
+			<view class="steps step2 {{order.order_status==2?'on':(order.order_status>0?'off':'')}}">
+				<view class="time">{{times[1]}}</view>
+				<view class="dot"></view>
+				<view class="title">到达</view>
+			</view>
+			<view class="steps step3 {{order.order_status==3?'on':(order.order_status>0?'off':'')}}">
+				<view class="time">{{times[2]}}</view>
+				<view class="dot"></view>
+				<view class="title">检测</view>
+			</view>
+			<view class="steps step4 {{order.order_status==4?'on':(order.order_status>0?'off':'')}}">
+				<view class="time">{{times[3]}}</view>
+				<view class="dot"></view>
+				<view class="title">完成</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="rownob rowbtn">
+	<button class='bigbutton' hover-class='buttonactive' bind:tap="onReach" wx:if="{{order.order_status==1}}">达到救援现场</button>
+	<button class='bigbutton btnredirect' hover-class='buttonactive' bind:tap="onRedirect" wx:if="{{order.order_status==2}}">改派</button>
+	<button class='bigbutton btntest' hover-class='buttonactive' bind:tap="onTest" wx:if="{{order.order_status==2}}">检测</button>
+	<button class='bigbutton' hover-class='buttonactive' bind:tap="onFinish" wx:if="{{order.order_status==3}}">完成</button>
+	<button class='bigbutton btnfinishview' hover-class='buttonactive' bind:tap="onFinishView" wx:if="{{order.order_status==4||order.order_status==5}}">查看救援信息</button>
+	</view>
+
+
+</view>
+	
